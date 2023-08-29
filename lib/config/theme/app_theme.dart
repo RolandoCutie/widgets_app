@@ -14,11 +14,12 @@ class AppTheme {
   final int selectedColor;
 
   AppTheme({this.selectedColor = 0})
-      : assert(selectedColor>= 0, 'Selected Color must be greater than'),
-        assert(selectedColor<= colorList.length, 'Selected Color must equal or less thant ${colorList.length}');
+      : assert(selectedColor >= 0, 'Selected Color must be greater than'),
+        assert(selectedColor <= colorList.length,
+            'Selected Color must equal or less thant ${colorList.length}');
 
   ThemeData getTheme() => ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: colorList[selectedColor],
-      );
+      useMaterial3: true,
+      colorSchemeSeed: colorList[selectedColor],
+      appBarTheme: const AppBarTheme(centerTitle: false));
 }
