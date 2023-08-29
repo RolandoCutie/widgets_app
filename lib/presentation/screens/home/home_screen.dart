@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = "home_screen";
+
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("HomeScreen + Material"),
+        title: const Text("HomeScreen + Material"),
       ),
-      body: _HomeView(),
+      body: const _HomeView(),
     );
   }
 }
@@ -55,8 +58,8 @@ class _CustomListTile extends StatelessWidget {
       ),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
-      onTap: (){
-        // TODO:Navegar a otra pantalla 
+      onTap: () {
+        context.push(menuItem.link);
       },
     );
   }
