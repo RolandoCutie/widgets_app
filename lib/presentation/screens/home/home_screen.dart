@@ -19,9 +19,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _HomeView extends StatelessWidget {
-  const _HomeView({
-    super.key,
-  });
+  const _HomeView();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,6 @@ class _HomeView extends StatelessWidget {
 
 class _CustomListTile extends StatelessWidget {
   const _CustomListTile({
-    super.key,
     required this.menuItem,
   });
 
