@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+
 class _HomeView extends StatelessWidget {
   const _HomeView();
 
@@ -61,3 +62,4 @@ class _CustomListTile extends StatelessWidget {
     );
   }
 }
+
