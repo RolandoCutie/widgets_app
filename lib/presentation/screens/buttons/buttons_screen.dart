@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class ButtonsScreen extends StatelessWidget {
   static const String name = "buttons-screen";
+
   const ButtonsScreen({super.key});
 
   @override
@@ -44,7 +45,7 @@ class _ButtonsView extends StatelessWidget {
               FilledButton(onPressed: () {}, child: const Text("Filled")),
               FilledButton.icon(
                   onPressed: () {},
-                  label: const Text("Filled Icon"),
+                  label: const Text("Fille Icon"),
                   icon: const Icon(Icons.accessibility_new)),
               OutlinedButton(onPressed: () {}, child: const Text("Outline")),
               OutlinedButton.icon(
@@ -87,7 +88,7 @@ class CustomButton extends StatelessWidget {
       child: Material(
         color: colors.primary,
         child: InkWell(
-          onTap: (){},
+          onTap: () {},
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Text(
