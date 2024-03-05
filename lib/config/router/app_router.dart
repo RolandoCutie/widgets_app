@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial_screen.dart';
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
 
@@ -22,5 +23,17 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
   GoRoute(
       path: '/snackbar_screen',
       name: SnackBarScreen.name,
-      builder: (context, state) => const SnackBarScreen())
+      builder: (context, state) => const SnackBarScreen()),
+  GoRoute(
+      path: '/animated',
+      name: AnimatedScreen.name,
+      builder: (context, state) => const AnimatedScreen()),
+  GoRoute(
+      path: '/controls_screen',
+      name: UiControlsScreen.name,
+      builder: (context, state) => const UiControlsScreen()),
+  GoRoute(
+      path: '/tutorial_screen',
+      name: TutorialScreen.name,
+      builder: (context, state) => const TutorialScreen())
 ]);

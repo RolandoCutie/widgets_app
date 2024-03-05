@@ -35,4 +35,19 @@ const appMenuItems = <MenuItem>[
       subTitle: 'Indicadores en pantalla',
       link: '/snackbar_screen',
       icon: Icons.info_outline),
+  MenuItem(
+      title: 'Animated containers',
+      subTitle: 'Stateful widgets animado',
+      link: '/animated',
+      icon: Icons.check_box_outline_blank_rounded),
+  MenuItem(
+      title: 'Ui Controls + Tiles',
+      subTitle: 'Stateful widgets animado',
+      link: '/controls_screen',
+      icon: Icons.car_rental_outlined),
+  MenuItem(
+      title: 'Introduccion a la aplicación',
+      subTitle: 'Pequeno tutorial de la aplicacion',
+      link: '/tutorial_screen',
+      icon: Icons.accessible_rounded),
 ];
