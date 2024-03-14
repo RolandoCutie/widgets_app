@@ -33,6 +33,9 @@ dependencies:
     sdk: flutter
   go_router: ^10.1.1
   animate_do: ^3.3.4
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
 
 dev_dependencies:
 
@@ -42,6 +45,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  riverpod_generator: ^2.4.0
+  riverpod_lint: ^2.3.10
   flutter_test:
     sdk: flutter
 
