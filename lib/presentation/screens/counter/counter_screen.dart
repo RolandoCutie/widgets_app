@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:widgets_app/config/theme/app_theme.dart';
 import 'package:widgets_app/presentation/providers/providers_counter.dart';
 import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
@@ -11,18 +12,18 @@ class CounterApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     //para obtener la referencia de los providers
     final int clickCounter = ref.watch(counterProvider);
-    final bool isDarkmode = ref.watch(isDarkmodeProvider);
+    final AppTheme appTheme = ref.watch(themeNotifierProvider);
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("Counter app"),
         actions: [
           IconButton(
-            icon: isDarkmode
+            icon: appTheme.isDarkMode
                 ? const Icon(Icons.dark_mode_outlined)
                 : const Icon(Icons.light_mode_outlined),
             onPressed: () {
-              ref.read(isDarkmodeProvider.notifier).state = !isDarkmode;
+              ref.read(themeNotifierProvider.notifier).toggleDarkMode();
             },
           )
         ],
